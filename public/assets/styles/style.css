@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: slategray;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+i {
+  font-size: 18px;
+}
+
+.content {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100vw;
+}
+
+.content a {
+  text-decoration: none;
+  color: slategray;
+}
+
+#home {
+  background: url("../images/jason-abdilla-anE0V1ljPUI-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+#home h1 {
+  color: #fff;
+  display: inline;
+  font-size: 125px;
+  opacity: 0.2;
+}
+
+#home h2 {
+  display: inline;
+  font-size: 125px;
+  opacity: 0.1;
+}
+
+#home h3 {
+  font-size: 20px;
+  text-align: center;
+}
+
+#home ul {
+  padding: 0;
+  list-style: none;
+}
+
+#home .name {
+  position: absolute;
+  text-align: right;
+  right: 0%;
+  top: 5%;
+}
+
+#home .web-dev {
+  position: absolute;
+  text-align: right;
+  right: 0%;
+  top: 13%;
+}
+
+#home .techs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 60%;
+  text-align: center;
+}
+
+#home .techs div {
+  min-width: 25%;
+}
+
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.links {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  z-index: 10;
+}
+
+.links ul {
+  list-style: none;
+}
+
+.links ul li {
+  padding: 15px 0;
+}
+
+#projects {
+  background-color: black;
+}
+
+#projects .project-intro {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  right: 5%;
+  text-align: right;
+}
+
+#projects .project-1 {
+  background-color: teal;
+  height: 280px;
+  width: 900px;
+  position: absolute;
+  right: 5%;
+  top: 18%;
+}
+
+#projects .project-2 {
+  height: 280px;
+  width: 900px;
+  position: absolute;
+  background-color: red;
+  bottom: 5%;
+}
+
+#feedback {
+  background-color: whitesmoke;
+}
+
+#contact {
+  background-color: powderblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+}
+
+#contact form {
+  width: 40%;
+}
+
+#contact form div {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+#contact input,
+#contact textarea {
+  background: none;
+  border: none;
+  border-bottom: 2px solid slategray;
+  outline: none;
+  width: -webkit-fill-available;
+  margin: 0 10px;
+}
+
+#contact span {
+  font-family: "Cabin Sketch", cursive;
+  display: flex;
+  align-items: flex-end;
+}
+
+#contact button {
+  font-family: "Cabin Sketch", cursive;
+  background: none;
+  border: 1px solid slategray;
+  width: 120px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+#contact button:hover {
+  box-shadow: 0px 0px 10px 1px;
+}
+
+#contact:focus-visible {
+  outline: none;
+}
+
+#contact #contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 400px) {
+  .links {
+    left: -5%;
+  }
+
+  .links ul li {
+    padding: 10px 0;
+  }
+
+  #home h1 {
+    font-size: 60px;
+    line-height: 0.5;
+  }
+
+  #home h2 {
+    font-size: 90px;
+    line-height: 0.6;
+  }
+
+  #home .web-dev {
+    top: 25%;
+  }
+
+  .about,
+  #home .techs,
+  #contact form {
+    width: 100%;
+  }
+
+  #contact #contact-form {
+    margin-bottom: -80%;
+  }
+}

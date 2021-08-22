@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ryan Skog - Web Dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <nav class="links">
+        <ul>
+          <li><a href="#feedback">feedback.</a></li>
+
+          <li><a href="#projects">projects.</a></li>
+          <li><a href="#contact">contact.</a></li>
+          <li><a href="#home">home.</a></li>
+
+          <li>
+            <a href="https://www.linkedin.com/in/ryan-skog/" target="_blank"
+              ><i class="bi bi-linkedin" role="img" aria-label="LinkedIn"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/raskog1" target="_blank"
+              ><i class="bi bi-github" role="img" aria-label="GitHub"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <section id="home">
+        <div class="web-dev">
+          <h1>web</h1>
+          <h1>Developer.</h1>
+        </div>
+
+        <div class="name">
+          <h2>ryan</h2>
+          <h2>Skog.</h2>
+        </div>
+        <div class="techs">
+          <div class="front-end">
+            <h3>Front-End</h3>
+            <div class="tech-list-front"></div>
+          </div>
+
+          <div class="back-end">
+            <h3>Back-End</h3>
+            <div class="tech-list-back"></div>
+          </div>
+
+          <div class="full-stack">
+            <h3>Full Stack</h3>
+            <div class="tech-list-full"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2 class="project-intro">
+          The following projects were designed with the MERN stack in
+          conjunction with Material UI.
+        </h2>
+        <div class="project-1">
+          <h3>The Threadery</h3>
+        </div>
+        <div class="project-2">
+          <h3>Learning Portal</h3>
+        </div>
+      </section>
+      <section id="feedback">Feedback</section>
+      <section id="contact">
+        <form
+          id="contact-form"
+          method="POST"
+          action="send"
+          enctype="multipart/form-data"
+        >
+          <div>
+            <span>name.</span>
+            <input type="text" aria-label="name" name="name" required />
+          </div>
+          <div>
+            <span>email.</span>
+            <input type="email" aria-label="email" name="email" required />
+          </div>
+          <div>
+            <span>subject.</span>
+            <input type="text" aria-label="subject" name="subject" required />
+          </div>
+          <div>
+            <span>message.</span>
+            <textarea
+              aria-label="message"
+              name="message"
+              rows="1"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" value="submit">send.</button>
+        </form>
+      </section>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/scripts/script.js"></script>
+    <script src="./assets/scripts/email.js"></script>
+  </body>
+</html>
