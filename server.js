@@ -35,17 +35,15 @@ app.post("/send", (req, res) => {
   let form = new multiparty.Form();
   let data = {};
   form.parse(req, function (err, fields) {
-    console.log(fields);
     Object.keys(fields).forEach(function (property) {
       data[property] = fields[property].toString();
     });
 
-    //2. You can configure the object however you want
     const mail = {
       from: data.name,
       to: process.env.EMAIL,
       subject: data.subject,
-      text: `${data.name} <${data.email}> \n${data.message}`,
+      text: `${data.name} has sent you a message from <${data.email}> \n${data.message}`,
     };
 
     //3.

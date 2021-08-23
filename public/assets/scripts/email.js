@@ -5,15 +5,23 @@ const formEvent = form.addEventListener("submit", function (e) {
 
   let mail = new FormData(form);
 
-  console.log(mail);
   sendMail(mail);
 });
 
 function sendMail(mail) {
-  fetch("https://ancient-dusk-97528.herokuapp.com/send", {
+  fetch("/send", {
     method: "post",
     body: mail,
   }).then((response) => {
+    document.getElementById("contact-submit").textContent = "thank you.";
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("subject").value = "";
+    document.getElementById("message").value = "";
+
+    setTimeout(() => {
+      document.getElementById("contact-submit").textContent = "submit.";
+    }, 8000);
     return response.json();
   });
 }
