@@ -33,11 +33,11 @@
       <nav class="links">
         <ul>
           <li><a href="#feedback">feedback.</a></li>
-
           <li><a href="#projects">projects.</a></li>
           <li><a href="#contact">contact.</a></li>
           <li><a href="#home">home.</a></li>
-
+        </ul>
+        <ul class="social-links">
           <li>
             <a href="https://www.linkedin.com/in/ryan-skog/" target="_blank"
               ><i class="bi bi-linkedin" role="img" aria-label="LinkedIn"></i
@@ -62,17 +62,17 @@
         </div>
         <div class="techs">
           <div class="front-end">
-            <h3>Front-End</h3>
+            <h3>frontEnd</h3>
             <div class="tech-list-front"></div>
           </div>
 
           <div class="back-end">
-            <h3>Back-End</h3>
+            <h3>backEnd</h3>
             <div class="tech-list-back"></div>
           </div>
 
           <div class="full-stack">
-            <h3>Full Stack</h3>
+            <h3>fullStack</h3>
             <div class="tech-list-full"></div>
           </div>
         </div>
@@ -80,20 +80,105 @@
 
       <!-- Projects Section -->
       <section id="projects">
-        <h2 class="project-intro">
+        <!-- <h2 class="project-intro">
           The following projects were designed with the MERN stack in
           conjunction with Material UI.
-        </h2>
-        <div class="project-1">
-          <h3>The Threadery</h3>
+        </h2> -->
+        <div class="project-1 d-flex justify-content-between">
+          <div>
+            <img
+              src="./assets/images/iphone.png"
+              class="phone"
+              alt="iphone frame"
+            />
+            <img
+              src="./assets/images/threadery.gif"
+              class="threadery"
+              alt="The Threadery demo"
+            />
+          </div>
+          <div class="threadery-info">
+            <h3>The Threadery</h3>
+            <ul>
+              <li>
+                Embroiderers and cross-stitchers will love keeping track of
+                their threads with The Threadery mobile app, designed from the
+                ground up as a PWA.
+              </li>
+              <li>
+                MongoDB, Mongoose, and Express handle data storage of available
+                threads while allowing a user to track quantity owned,
+                favorites, and a wishlist for shopping.
+              </li>
+              <li>
+                React, in conjunction with Material UI handle all styling
+                aspects of the components, while React-Window handles the smart
+                rendering of components only as needed.
+              </li>
+              <li>
+                Authentication and security of assets is provided by JSON Web
+                Tokens.
+              </li>
+            </ul>
+            <div class="project-1-links d-flex justify-content-around">
+              <a
+                class="d-inline"
+                href="https://the-threadery.herokuapp.com/"
+                target="_blank"
+                >Deployed Application</a
+              >
+              <a
+                class="d-inline"
+                href="https://github.com/raskog1/The-Threadery"
+                target="_blank"
+                >Github Repository</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="project-2">
-          <h3>Learning Portal</h3>
+        <div class="project-2 d-flex justify-content-around">
+          <div class="learning-info">
+            <h3>Learning Portal</h3>
+            <ul>
+              <li>
+                Learning Portal allows users to interact with each other in a
+                coding community via a message board, take assessments, share
+                scores, and generate certificates.
+              </li>
+              <li>
+                Developed as a desktop application with the full MERN stack,
+                while also utilizing Material UI for styling and JSON Web Tokens
+                for authentication and security.
+              </li>
+            </ul>
+            <div class="project-2-links d-flex justify-content-around">
+              <a
+                class="d-inline"
+                href="https://code-learning-portal.herokuapp.com/"
+                target="_blank"
+                >Deployed Application</a
+              >
+              <a
+                class="d-inline"
+                href="https://github.com/raskog1/learning-portal"
+                target="_blank"
+                >Github Repository</a
+              >
+            </div>
+          </div>
+          <img
+            src="./assets/images/learning.gif"
+            class="learning"
+            alt="Learning Portal demo"
+          />
         </div>
       </section>
 
       <!-- Feedback Section -->
       <section id="feedback">
+        <div class="feedback-emblem">
+          <h2>feedback.</h2>
+        </div>
         <div class="textblock"><p class="feedback-list"></p></div>
       </section>
 
