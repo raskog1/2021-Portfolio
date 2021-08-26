@@ -9,19 +9,19 @@ const formEvent = form.addEventListener("submit", function (e) {
 });
 
 function sendMail(mail) {
-  // fetch("/send", {
-  //   method: "post",
-  //   body: mail,
-  // }).then((response) => {
-  document.getElementById("contact-submit").textContent = "thank you.";
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("subject").value = "";
-  document.getElementById("message").value = "";
+  fetch("/send", {
+    method: "post",
+    body: mail,
+  }).then((response) => {
+    document.getElementById("contact-submit").textContent = "thank you.";
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("subject").value = "";
+    document.getElementById("message").value = "";
 
-  setTimeout(() => {
-    document.getElementById("contact-submit").textContent = "submit.";
-  }, 8000);
-  return response.json();
-  // });
+    setTimeout(() => {
+      document.getElementById("contact-submit").textContent = "submit.";
+    }, 8000);
+    return response.json();
+  });
 }
