@@ -30,11 +30,18 @@ i {
   font-size: 18px;
 }
 
+a:hover,
+i:hover {
+  color: powderblue;
+}
+
 .content {
+  background: url("../images/jason-abdilla-anE0V1ljPUI-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  height: 100vh;
-  width: 100vw;
 }
 
 .content a {
@@ -42,22 +49,9 @@ i {
   color: slategray;
 }
 
-.content a:hover,
-.content i:hover {
-  color: powderblue;
-}
-
-#home {
-  background: url("../images/jason-abdilla-anE0V1ljPUI-unsplash.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-}
-
 #home h1,
 #feedback h2 {
-  color: slategray;
+  /* color: slategray; */
   display: inline;
   font-size: 125px;
   opacity: 0.2;
@@ -81,9 +75,6 @@ i {
 }
 
 #home .name {
-  position: absolute;
-  text-align: right;
-  right: 0%;
   top: 5%;
 }
 
@@ -102,7 +93,7 @@ i {
   width: 60%;
   text-align: center;
   height: 60px;
-  margin-top: 375px;
+  bottom: -20%;
 }
 
 #home .techs div {
@@ -230,9 +221,6 @@ i {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   font-size: 18px;
   box-shadow: 0 3000px rgba(176, 224, 230, 0.4) inset;
 }
@@ -243,7 +231,6 @@ i {
 
 #contact form div {
   display: flex;
-  justify-content: space-between;
   margin: 10px;
 }
 
@@ -283,11 +270,6 @@ i {
 
 #contact:focus-visible {
   outline: none;
-}
-
-#contact #contact-form {
-  display: flex;
-  flex-direction: column;
 }
 
 @media only screen and (max-width: 450px) {

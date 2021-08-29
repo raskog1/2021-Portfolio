@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="./assets/styles/style.css" />
   </head>
   <body>
-    <div class="content">
+    <div class="content vw-100 vh-100">
       <nav class="links">
         <ul>
           <li><a href="#feedback">feedback.</a></li>
@@ -50,17 +50,19 @@
           </li>
         </ul>
       </nav>
-      <section id="home">
+
+      <!-- Home Section -->
+      <section class="container-xxl d-flex" id="home">
         <div class="web-dev">
           <h1>web</h1>
           <h1>Developer.</h1>
         </div>
 
-        <div class="name">
+        <div class="name position-absolute text-end end-0">
           <h2>ryan</h2>
           <h2>Skog.</h2>
         </div>
-        <div class="techs">
+        <div class="techs position-relative">
           <div class="front-end">
             <h3>frontEnd</h3>
             <div class="tech-list-front"></div>
@@ -80,10 +82,6 @@
 
       <!-- Projects Section -->
       <section id="projects">
-        <!-- <h2 class="project-intro">
-          The following projects were designed with the MERN stack in
-          conjunction with Material UI.
-        </h2> -->
         <div class="project-1 d-flex justify-content-between">
           <div>
             <img
@@ -183,68 +181,64 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contact">
-        <a href="mailto:ryan.skog@outlook.com">
-          <i class="bi bi-envelope-fill"></i>
-        </a>
-        <p>or.</p>
-        <!-- <form
-          id="contact-form"
-          method="POST"
-          action="send"
-          enctype="multipart/form-data"
-          autocomplete="off"
-        > -->
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          id="contact-form"
-        >
-          <div>
-            <span>name.</span>
-            <input
-              type="text"
-              aria-label="name"
-              id="name"
-              name="name"
-              required
-            />
-          </div>
-          <div>
-            <span>email.</span>
-            <input
-              type="email"
-              aria-label="email"
-              id="email"
-              name="email"
-              required
-            />
-          </div>
-          <div>
-            <span>subject.</span>
-            <input
-              type="text"
-              aria-label="subject"
-              id="subject"
-              name="subject"
-              required
-            />
-          </div>
-          <div>
-            <span>message.</span>
-            <textarea
-              aria-label="message"
-              id="message"
-              name="message"
-              rows="1"
-              required
-            ></textarea>
-          </div>
-          <button type="submit" value="submit" id="contact-submit">
-            send.
-          </button>
-        </form>
+      <section id="contact" class="d-flex flex-column">
+        <div class="container-xxl text-center">
+          <a href="mailto:ryan.skog@outlook.com">
+            <i class="bi bi-envelope-fill" role="img" aria-label="Mail"></i>
+          </a>
+          <p class="my-5">or.</p>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            id="contact-form"
+            class="mx-auto d-flex flex-column"
+          >
+            <div>
+              <span>name.</span>
+              <input
+                type="text"
+                aria-label="name"
+                id="name"
+                name="name"
+                required
+              />
+            </div>
+            <div>
+              <span>email.</span>
+              <input
+                type="email"
+                aria-label="email"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+            <div>
+              <span>subject.</span>
+              <input
+                type="text"
+                aria-label="subject"
+                id="subject"
+                name="subject"
+                required
+              />
+            </div>
+            <div>
+              <span>message.</span>
+              <textarea
+                aria-label="message"
+                id="message"
+                name="message"
+                rows="1"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" value="submit" id="contact-submit">
+              send.
+            </button>
+          </form>
+        </div>
       </section>
     </div>
     <script src="./assets/scripts/feedback.js"></script>
