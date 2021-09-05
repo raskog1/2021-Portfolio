@@ -142,7 +142,11 @@ i:hover {
 }
 
 #projects .learning {
-  height: 350px;
+  height: 300px;
+}
+
+#projects .threadery {
+  height: 300px;
 }
 
 #projects .threadery-info {
@@ -155,7 +159,7 @@ i:hover {
 }
 
 #projects .projects {
-  width: 60%;
+  width: 70%;
   margin: auto;
 }
 
@@ -174,7 +178,7 @@ i:hover {
 #projects .project-1 {
   max-width: 1100px;
   margin: auto;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 #projects .project-2 {
