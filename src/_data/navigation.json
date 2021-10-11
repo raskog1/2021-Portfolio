@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "text": "feedback.",
+      "url": "#feedback"
+    },
+    {
+      "text": "projects.",
+      "url": "#projects"
+    },
+    {
+      "text": "contact.",
+      "url": "#contact"
+    },
+    {
+      "text": "home.",
+      "url": "#home"
+    },
+    {
+      "text": "blog.",
+      "url": "#blog"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+<section id="projects" class="d-flex">
+  <div class="projects">
+    {% for item in collections.projects %}
+
+    <div class="project__wrap d-flex justify-content-around">
+      <img
+        src="{{ item.data.hero.image }}"
+        class="project__wrap--image"
+        alt="{{ item.data.hero.imageAlt }}"
+      />
+      <div class="threadery-info project__wrap--info">
+        <h3>{{ item.data.title }}</h3>
+        <ul>
+          <li>{{ item.data.summary }}</li>
+          <li>{{ item.data.supplemental1 }}</li>
+
+          <!-- Check for additional supplemental material -->
+          {% if item.data.supplemental2 %}
+          <li>{{ item.data.supplemental2 }}</li>
+          {% endif %}
+
+          <!-- Check for additional supplemental material -->
+          {% if item.data.supplemental3 %}
+          <li>{{ item.data.supplemental3 }}</li>
+          {% endif %}
+        </ul>
+        <div class="project__wrap--links d-flex justify-content-around">
+          <a class="d-inline" href="{{ item.data.deployed }}" target="_blank"
+            >Deployed Application</a
+          >
+          <a class="d-inline" href="{{ item.data.github }}" target="_blank"
+            >Github Repository</a
+          >
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</section>

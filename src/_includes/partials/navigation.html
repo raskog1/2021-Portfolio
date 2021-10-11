@@ -1,0 +1,33 @@
+<!-- Navigation Section -->
+<header role="banner">
+  <nav class="links" aria-label="Primary">
+    <ul class="links__pages">
+      {% for item in navigation.items %}
+      <li>
+        <a
+          href="{{ item.url }}"
+          {{
+          helpers.getLinkActiveState(item.url,
+          page.url)
+          |
+          safe
+          }}
+          >{{ item.text }}</a
+        >
+      </li>
+      {% endfor %}
+    </ul>
+    <ul class="links__social">
+      <li>
+        <a href="https://www.linkedin.com/in/ryan-skog/" target="_blank"
+          ><i class="bi bi-linkedin" role="img" aria-label="LinkedIn"></i
+        ></a>
+      </li>
+      <li>
+        <a href="https://github.com/raskog1" target="_blank"
+          ><i class="bi bi-github" role="img" aria-label="GitHub"></i
+        ></a>
+      </li>
+    </ul>
+  </nav>
+</header>

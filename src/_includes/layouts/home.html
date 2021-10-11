@@ -1,0 +1,60 @@
+<!-- Extending the base.html template -->
+{% extends "layouts/base.html" %}
+
+<!-- Start content -->
+{% block content %}
+
+<!-- Home Section -->
+<div class="wrapper">
+  <section class="container-xxl d-flex home" id="home">
+    <div class="web-dev home__role">
+      <h1>{{ home.headone }}</h1>
+      <h1>{{ home.headtwo }}</h1>
+    </div>
+
+    <div class="position-absolute text-end end-0 home__name">
+      <h2>{{ home.firstname }}</h2>
+      <h2>{{ home.lastname }}</h2>
+    </div>
+    <div class="techs position-relative home__techs">
+      <div class="front-end home__techs--front">
+        <h3>{{ home.front }}</h3>
+        <div class="tech-list-front"></div>
+      </div>
+
+      <div class="back-end home__techs--back">
+        <h3>{{ home.back }}</h3>
+        <div class="tech-list-back"></div>
+      </div>
+
+      <div class="full-stack home__techs--full">
+        <h3>{{ home.full }}</h3>
+        <div class="tech-list-full"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Projects section -->
+{% include "partials/projects.html" %}
+
+<!-- Feedback section -->
+{% include "partials/feedback.html" %}
+
+<!-- Blog section -->
+{% include "partials/blog.html" %}
+
+<!-- Contact section -->
+{% include "partials/contact.html" %}
+
+<!-- <article>
+  <h1>{{ title }}</h1> -->
+
+<!-- This is a filter - a js function applied to variables
+  it turns on autoescaping which protects us against
+  cross-site scripting -->
+<!-- {{ content | safe }}
+</article> -->
+
+{% endblock %}
+<!-- End content -->
