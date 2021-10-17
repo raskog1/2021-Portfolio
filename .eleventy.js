@@ -16,6 +16,9 @@ module.exports = (config) => {
     return [...collection.getFilteredByGlob("./src/posts/*.md")].reverse();
   });
 
+  // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
+  config.setUseGitIgnore(false);
+
   return {
     // Allows us to use .html files instead of .njk
     markdownTemplateEngine: "njk",

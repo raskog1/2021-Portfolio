@@ -4,8 +4,8 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "npx eleventy --serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
+    "production": "NODE_ENV=production npx gulp && NODE_ENV=production npx eleventy"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,14 @@
   "homepage": "https://github.com/raskog1/2021-Portfolio#readme",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
+    "concurrently": "^6.3.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.0.0",
     "multiparty": "^4.2.2",
-    "nodemailer": "^6.6.3"
+    "nodemailer": "^6.6.3",
+    "sass": "^1.42.1"
   }
 }

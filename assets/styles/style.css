@@ -127,29 +127,28 @@ i:hover {
 
 #projects {
   background-color: #1b263b;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 #projects a {
   text-decoration: underline;
 }
 
-#projects li {
+.project__wrap li {
   margin: 10px 0;
+  font-size: 1rem;
 }
 
-#projects .phone {
-  height: 400px;
+.project__wrap {
+  height: 50%;
+  width: 70%;
+  padding: 15px;
+  overflow: hidden;
 }
 
-#projects .learning {
-  height: 300px;
-}
-
-#projects .threadery {
-  height: 300px;
-}
-
-#projects .threadery-info {
+.project__wrap--info {
+  font-size: 0.8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -158,32 +157,13 @@ i:hover {
   padding-bottom: 20px;
 }
 
-#projects .projects {
-  width: 70%;
-  margin: auto;
+.project__wrap--image {
+  padding: 10px;
+  /* width: 30%; */
 }
 
-#projects .learning-info {
-  width: 50%;
-}
-
-#projects .project-intro {
-  position: absolute;
-  top: 5%;
-  left: 20%;
-  right: 5%;
-  text-align: right;
-}
-
-#projects .project-1 {
-  max-width: 1100px;
-  margin: auto;
-  margin-bottom: 50px;
-}
-
-#projects .project-2 {
-  max-width: 1100px;
-  margin: auto;
+.project__wrap--next {
+  display: none;
 }
 
 #feedback {
@@ -196,7 +176,7 @@ i:hover {
 }
 
 #feedback .textblock {
-  width: 75%;
+  width: 70%;
   height: 80vh;
   margin: auto;
   overflow: auto;
@@ -267,6 +247,43 @@ i:hover {
   outline: none;
 }
 
+@media only screen and (max-width: 1200px) {
+  .project__wrap {
+    transform: scale(0.9);
+  }
+}
+
+/* Tablet Media Queries */
+@media only screen and (max-width: 1024px) {
+  #projects {
+    justify-content: center;
+  }
+
+  .project__wrap {
+    /* height: 40vh; */
+    width: 85vw;
+  }
+
+  .project__wrap--image {
+    width: 30vw;
+    align-self: center;
+  }
+
+  .project__wrap--info {
+    font-size: 1rem;
+  }
+
+  .project__wrap:nth-child(2) {
+    width: 90vw;
+  }
+
+  .project__wrap:nth-child(2) img {
+    width: 50vw;
+    margin-left: 2rem;
+  }
+}
+
+/* Modern Phone Media Queries */
 @media only screen and (max-width: 450px) {
   .links {
     width: 100%;
@@ -309,27 +326,77 @@ i:hover {
     width: 100%;
   }
 
-  #projects img {
-    transform: scale(0.5);
+  #projects {
+    flex-direction: row;
+    overflow: auto;
+    justify-content: start;
   }
 
-  #projects .threadery {
-    top: -351px;
-    left: 13px;
+  .project__wrap {
+    flex: 1 0 100%;
+    height: 100vh;
+    margin-top: 1rem;
+    flex-direction: column;
   }
 
-  #projects .project-1 {
+  /* .project__wrap:nth-child(2) {
+    height: 100vh;
+  } */
+
+  .project__wrap:nth-child(2) img {
+    width: 100vw;
+    margin-left: 0;
+  }
+
+  .project__wrap--next {
     display: block;
-    width: 100%;
-    right: 0;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 45%;
+    right: 5%;
   }
 
-  #projects li,
-  #projects a {
-    font-size: 12px;
+  .project__wrap--next i {
+    font-size: 40px;
+  }
+
+  .project__wrap--image {
+    width: 50vw;
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+
+  .project__wrap--info {
+    align-self: center;
+    width: 90vw;
+  }
+
+  .project__wrap li,
+  .project__wrap a {
+    font-size: 0.7rem;
   }
 
   #projects h3 {
     font-size: 16px;
+  }
+
+  .learning-info {
+    width: 75vw;
+  }
+
+  .learning {
+    width: 100vw;
+  }
+}
+
+/* Small Phone Media Queries */
+@media only screen and (max-width: 320px) {
+  .project__wrap li {
+    font-size: 0.6rem;
+  }
+
+  .project__wrap--image {
+    margin-bottom: 0.2rem;
   }
 }
