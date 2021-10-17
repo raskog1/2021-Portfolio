@@ -23,7 +23,7 @@ section {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 
 i {
@@ -330,6 +330,7 @@ i:hover {
     flex-direction: row;
     overflow: auto;
     justify-content: start;
+    scroll-snap-type: x mandatory;
   }
 
   .project__wrap {
@@ -337,6 +338,7 @@ i:hover {
     height: 100vh;
     margin-top: 1rem;
     flex-direction: column;
+    scroll-snap-align: center;
   }
 
   /* .project__wrap:nth-child(2) {
